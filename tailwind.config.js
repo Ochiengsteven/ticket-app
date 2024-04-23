@@ -23,6 +23,9 @@ module.exports = {
         "grey-accent": "#3f4050",
         "grey-accent-hover": "#2a2a35",
       },
+      screens: {
+        xs: "475px",
+      },
     },
   },
   plugins: [],

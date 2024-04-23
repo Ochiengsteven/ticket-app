@@ -19,8 +19,14 @@ const TicketCard = () => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec
         fringilla libero. Nullam vel eros nec nunc ultricies lacinia.
       </p>
-      <ProgressDisplay />
-      <Status />
+      <div className="flex-grow"></div>
+      <div className="flex mt-2 w-full justify-between">
+        <div className="flex flex-col w-1/3">
+          <p className="my-1 text-xs">08/31/23 10:43PM</p>
+          <ProgressDisplay />
+        </div>
+        <Status />
+      </div>
     </div>
   );
 };

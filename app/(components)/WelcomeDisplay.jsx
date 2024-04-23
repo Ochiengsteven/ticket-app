@@ -3,8 +3,8 @@ import React from "react";
 const WelcomeDisplay = () => {
   return (
     <div className="p-4">
-      <h3 className="">Welcome Back</h3>
-      <p className="text-sm">Hello Steve, Here are your most recent tickets</p>
+      <h3>Welcome Back</h3>
+      <p>Hello Steve, Here are your most recent tickets</p>
     </div>
   );
 };
