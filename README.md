@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
 
 ## Getting Started
 
@@ -34,3 +34,9 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## APP UI
+
+![ui](https://github.com/Ochiengsteven/ticket-app/assets/91716656/0f8e5dfb-04fb-4e6e-92e0-d3231ee39760)
+
+- Credits [Mahfuzul Islam Nabi](https://dribbble.com/mahfuzulnabil) on [Dribbble](https://dribbble.com/shots/22337767-Ticket-Management-Web-App-Dashboard)
