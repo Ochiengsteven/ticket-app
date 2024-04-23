@@ -13,8 +13,12 @@ const TicketCard = () => {
           <DeleteBlock />
         </div>
       </div>
-      <h4 className="text-lg font-semibold">Ticket Title</h4>
+      <h4 className="">Ticket Title</h4>
       <hr className="h-px border-0 bg-page mb-2 " />
+      <p className="mb-2">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec
+        fringilla libero. Nullam vel eros nec nunc ultricies lacinia.
+      </p>
       <ProgressDisplay />
       <Status />
     </div>
