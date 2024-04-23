@@ -36,7 +36,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ## APP UI
+
 ![ui](https://github.com/Ochiengsteven/ticket-app/assets/91716656/0f8e5dfb-04fb-4e6e-92e0-d3231ee39760)
 
 - Credits [Mahfuzul Islam Nabi](https://dribbble.com/mahfuzulnabil) on [Dribbble](https://dribbble.com/shots/22337767-Ticket-Management-Web-App-Dashboard)
-
