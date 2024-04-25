@@ -36,7 +36,7 @@ const Dashboard = () => {
     <div>
       <TopNav />
       <div className="p-5 overflow-y-auto xs:p-0">
-        <div>
+        <div className="flex flex-col items-center justify-center p-2">
           <StatusGraph tickets={tickets} />
         </div>
         <div>
