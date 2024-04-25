@@ -3,8 +3,10 @@
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
-const TicketForm = () => {
+const TicketForm = ({ ticket }) => {
   const router = useRouter();
+
+  const EDITMODE = ticket._id === "new" ? false : true;
 
   const startingTicketData = {
     title: "",
@@ -14,6 +16,14 @@ const TicketForm = () => {
     active: true,
     progress: 0,
   };
+
+  if (EDITMODE) {
+    startingTicketData["title"] = ticket.title;
+    startingTicketData["description"] = ticket.description;
+    startingTicketData["status"] = ticket.status;
+    startingTicketData["priority"] = ticket.priority;
+    startingTicketData["progress"] = ticket.progress;
+  }
 
   const [formData, setFormData] = useState(startingTicketData);
 
@@ -26,21 +36,35 @@ const TicketForm = () => {
     event.preventDefault();
     console.log("Submitted:", formData);
     // Handle form submission logic here, e.g., send the ticketData object to the server
-    const res = await fetch("/api/Tickets", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ formData }),
-    });
+    if (EDITMODE) {
+      const res = await fetch(`/api/Tickets/${ticket._id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ formData }),
+      });
 
-    if (!res.ok) {
-      throw new Error("Failed to create ticket.");
+      if (!res.ok) {
+        throw new Error("Failed to update ticket.");
+      }
+    } else {
+      const res = await fetch("/api/Tickets", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ formData }),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to create ticket.");
+      }
     }
 
     router.refresh();
     router.push("/");
-    console.log(res);
+    router.refresh("/");
   };
 
   return (
@@ -50,7 +74,7 @@ const TicketForm = () => {
         className="flex flex-col gap-2 w-1/2"
         method="post"
       >
-        <h3>Create Your Order</h3>
+        <h3>{EDITMODE ? "Update your Ticket" : "Create Your Ticket"}</h3>
         <div className="flex flex-col">
           <label htmlFor="title">Title</label>
           <input
@@ -124,7 +148,11 @@ const TicketForm = () => {
             max="100"
           />
         </div>
-        <input type="submit" className="btn" value="Create Ticket" />
+        <input
+          type="submit"
+          className="btn"
+          value={EDITMODE ? "Update Ticket" : "Create Ticket"}
+        />
       </form>
     </div>
   );
