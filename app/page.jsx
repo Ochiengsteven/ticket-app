@@ -1,6 +1,6 @@
 import React from "react";
-import TicketCard from "./(components)/TicketCard";
-import TopNav from "./(components)/TopNav";
+import TicketCard from "./(components)/card/TicketCard";
+import TopNav from "./(components)/nav/TopNav";
 
 const getTickets = async () => {
   try {
