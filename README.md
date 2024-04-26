@@ -51,7 +51,8 @@ This project is built using the following technologies:
 
 ### APP UI
 
-![ui](https://github.com/Ochiengsteven/ticket-app/assets/91716656/0f8e5dfb-04fb-4e6e-92e0-d3231ee39760)
+![UI](https://github.com/Ochiengsteven/ticket-app/assets/91716656/5ab07461-5caf-4b80-b28c-bc6e04e04596)
+
 
 ### Key Features <a name="key-features"></a>
 
