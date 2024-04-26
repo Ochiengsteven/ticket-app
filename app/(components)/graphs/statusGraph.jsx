@@ -55,12 +55,15 @@ const StatusGraph = ({ tickets }) => {
         .attr("class", "bar")
         .attr("x", 0)
         .attr("y", (d, i) => i * 28)
-        .attr("width", (d) => x((d.count / totalTickets) * 100))
+        .attr("width", 0)
         .attr("height", 15)
-        .attr("rx", 10) // Horizontal radius for rounded corners
-        .attr("ry", 10) // Vertical radius for rounded corners
+        .attr("rx", 10)
+        .attr("ry", 10)
         .attr("fill", (d) => colorScale(d.status))
-        .attr("stroke", "none");
+        .transition()
+        .duration(750)
+        .delay((d, i) => i * 100)
+        .attr("width", (d) => x((d.count / totalTickets) * 100));
 
       svg
         .selectAll(".percentage")
