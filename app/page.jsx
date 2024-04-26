@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import TicketCard from "./(components)/card/TicketCard";
 import TopNav from "./(components)/nav/TopNav";
 import StatusGraph from "./(components)/graphs/statusGraph";
+import DailyTicketsBarGraph from "./(components)/graphs/DailyTicketsBarGraph";
 
 const getTickets = async () => {
   try {
@@ -36,8 +37,21 @@ const Dashboard = () => {
     <div>
       <TopNav />
       <div className="p-5 overflow-y-auto xs:p-0">
-        <div className="flex flex-col items-center justify-center p-2">
-          <StatusGraph tickets={tickets} />
+        <div className="flex flex-col md:flex-row m-2 bg-page md:h-[35vh]">
+          <div className="md:w-1/2 p-2 pb-3 bg-card mr-2 mb-2 md:mb-0 rounded-lg">
+            <div>
+              <h4>Daily Tickets</h4>
+              <p>Check out each column for more details</p>
+            </div>
+            <DailyTicketsBarGraph tickets={tickets} />
+          </div>
+          <div className="flex flex-col items-center rounded-lg md:w-1/2 p-2 bg-card text-left">
+            <div className="w-full mb-3">
+              <h4>Tickets by status</h4>
+              <p>Open vs. In progress vs. Closed Tickets</p>
+            </div>
+            <StatusGraph tickets={tickets} />
+          </div>
         </div>
         <div>
           {uniqueStatus.map((uniqueStatus, statusIndex) => (

@@ -87,7 +87,7 @@ const StatusGraph = ({ tickets }) => {
       legendData.forEach((status) => {
         const legendEntry = legendContainer
           .append("div")
-          .attr("class", "flex items-center mr-4");
+          .attr("class", "flex items-center mr-4 justify-end");
 
         legendEntry
           .append("div")
@@ -102,7 +102,11 @@ const StatusGraph = ({ tickets }) => {
     }
   }, [tickets, initialized]);
 
-  return <svg ref={svgRef}></svg>;
+  return (
+    <div className="w-full items-start">
+      <svg ref={svgRef}></svg>
+    </div>
+  );
 };
 
 export default StatusGraph;

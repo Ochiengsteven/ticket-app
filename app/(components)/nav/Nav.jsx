@@ -4,22 +4,19 @@ import Link from "next/link";
 
 const Nav = () => {
   return (
-    <nav className="bg-nav text-default-text border-card-border py-4 px-2 xs:w-[410px] md:w-[24vw]">
-      <div className=" flex flex-col h-full justify-between items-center">
-        <div className=" flex flex-col gap-4">
-          <h1 className="mb-8 font-semibold text-xl">Manager Account</h1>
-          <Link href="/">
-            <FontAwesomeIcon icon={faHome} className="icon" />
-            Dashboard
-          </Link>
-          <Link href="/TicketPage/new">
-            <FontAwesomeIcon icon={faTicket} className="icon" />
-            Tickets
-          </Link>
-        </div>
-        <div>
-          <p>steve@gmail.com</p>
-        </div>
+    <nav className="flex justify-between items-center bg-nav p-4">
+      <div className="flex items-center space-x-4">
+        <Link href="/" className="flex">
+          <FontAwesomeIcon icon={faHome} className="icon" />
+          <h4>Dashboard</h4>
+        </Link>
+        <Link href="/TicketPage/new" className="flex">
+          <FontAwesomeIcon icon={faTicket} className="icon" />
+          <h4>Ticket</h4>
+        </Link>
+      </div>
+      <div>
+        <p className=" text-default-text">steve@gmail.com</p>
       </div>
     </nav>
   );
