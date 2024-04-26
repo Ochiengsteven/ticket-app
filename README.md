@@ -147,4 +147,4 @@ If you like my page please show your support and give this page a star!
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./LICENSE.md) licensed.
