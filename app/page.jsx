@@ -37,7 +37,7 @@ const Dashboard = () => {
     <div>
       <TopNav />
       <div className="p-5 overflow-y-auto xs:p-0">
-        <div className="flex flex-col md:flex-row m-2 bg-page md:h-[35vh]">
+        <div className="flex flex-col md:flex-row m-2 bg-page md:h-[38vh]">
           <div className="md:w-1/2 p-2 pb-3 bg-card mr-2 mb-2 md:mb-0 rounded-lg">
             <div>
               <h4>Daily Tickets</h4>
