@@ -8,7 +8,7 @@ import DailyTicketsBarGraph from "./(components)/graphs/DailyTicketsBarGraph";
 
 const getTickets = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/Tickets", {
+    const res = await fetch(`/api/Tickets`, {
       cache: "no-store",
     });
     const data = await res.json(); // Assuming the response is JSON data
