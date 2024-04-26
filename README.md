@@ -141,8 +141,6 @@ If you like my page please show your support and give this page a star!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-<br>
-
 #### **I would like to express my sincere gratitude to [Mahfuzul Islam Nabi](https://dribbble.com/mahfuzulnabil) on [Dribbble](https://dribbble.com/shots/22337767-Ticket-Management-Web-App-Dashboard) for the original design idea.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
